@@ -21,16 +21,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-  #   # Don't boot with headless mode
-  #   vb.gui = true
-  #
-     # Use VBoxManage to customize the VM. For example to change memory:
+    # vb.gui = true
+    
+    # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
   #
-  # View the documentation for the provider you're using for more
-#     puppet.manifests_path = "manifests"
-#     puppet.manifest_file  = "site.pp"
-#   end
-  config.vm.provision "puppet"
+
+  config.vm.provision "puppet" do |puppet|
+    puppet.module_path = "modules"
+  end
 end
