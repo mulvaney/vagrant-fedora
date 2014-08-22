@@ -3,6 +3,8 @@
 
 package { [
   'ruby',
+  'ruby-devel',
+  'tmux',
   'emacs',
   'git',
  ]:
