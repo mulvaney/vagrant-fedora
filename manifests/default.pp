@@ -4,6 +4,7 @@
 package { [
   'autoconf',
   'bison',
+  'cvs',
   'emacs',
   'gcc-c++',
   'git',
@@ -12,6 +13,7 @@ package { [
   'libxml2-devel',
   'libxslt-devel',
   'libyaml-devel',
+  'maven',
   'patch',
   'readline-devel',
   'openssl-devel',
